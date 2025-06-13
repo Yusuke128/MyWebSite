@@ -2,15 +2,82 @@
 <html lang="ja">
 
   <head>
+    <title>優羽Lab.Portfolio</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>優羽Lab. Portfolio</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 検索対応 -->
+    <meta name="description" content="優羽Lab.のポートフォリオサイト">
+    <meta name="keywords" content="Webサイト,ECサイト,ポートフォリオ,優羽Lab.,川野祐輔">
+    <!-- 自動リンク消去 -->
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <!-- テーマカラーの設定(タブの色) -->
+    <meta name="theme-color" content="#" />
+    <!-- URLの正規表現 -->
+    <link rel="canonical" href="">
+    <!-- ファビコンの設定 -->
+    <link rel="icon" href="img/favicon.png">
+    <!-- スマホのホームに追加したときのアイコン -->
+    <link rel="apple-touch-icon" href="img/">
+    <!-- CSS読み込み -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   </head>
 
   <body>
+    <header class="">
+      <h1><img src="img/Logo.png" width="1001" height="501" alt="優羽Lab." class="header_logo"></h1>
+      <nav>
+        <ul class="header_nav">
+          <li class="nav_item"><a href="">HOME</a></li>
+          <li class="nav_item"><a href="#profile">PROFILE</a></li>
+          <li class="nav_item"><a href="#works">WORKS</a></li>
+          <li class="nav_item"><a href="#price">PRICE</a></li>
+          <li class="nav_item"><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
 
+    <main>
+      <article id="mv" class="mv">
+        <div class="mv_text-center">
+          <h2 class="mv_title-boxShadow">優羽Lab. Portfolio</h2>
+          <p class="mv_content">訪問いただきありがとうございます。</p>
+          <p class="mv_content">優羽Lab.&nbsp;川野祐輔のポートフォリオです。</p>
+        </div>
+        <img src="img/mv.jpg" alt="背景" width="3600" height="2600" class="mv-background">
+      </article>
+
+      <article id="profile" class="profile_container-wrapper">
+        <div class="profile_inner">
+          <h3 class="profile_title red">PROFILE</h3>
+          <section class="profile_box">
+            <div class="profile_content left"><img src="img/Profile.png" alt="プロフィール写真" width="72" height="72" class="profile"></div>
+            <div class="profile_content right">
+              <p class="profile_txt">優羽Lab.&nbsp;川野&nbsp;祐輔と申します。</p>
+              <p class="profile_txt--mb2em">1991年生まれ。宮崎県在住。</p>
+              <p class="profile_txt">宮崎県内のIT企業にてSIerとしてBtoBビジネスに携わってきました。</p>
+              <p class="profile_txt">業務範囲はオフィスネットワークの構築からシステム構築(パッケージ),セキュリティ機器の導入・保守まで多岐にわたります。</p>
+              <p class="profile_txt">2024年に退職し、フリーランスに転向しました。</p>
+              <p class="profile_txt"><span class="concept">「お客様のやりたいことを最大限実現する。」</span>をコンセプトにチラシや名刺、ロゴ、ホームページ制作、システムコンサルティングを中心にデザインとITの力でお客様のビジネスサポートすべく活動しています。</p>
+            </div>
+          </section>
+
+          <section class="profile_scope">
+            <h4 class="scope_title">Scope&nbsp;of&nbsp;Business</h4>
+            <p class="scope-txt">私が会社員時代から携わっており、現在も行っている活動を紹介します。</p>
+          </section>
+
+        </div>
+      </article>
+
+    </main>
+    <footer></footer>
+    <!-- js読み込み -->
+    <script src="https://kit.fontawesome.com/fc4b29f1b1.js" crossorigin="anonymous" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+    <script src="js/function.js" defer></script>
   </body>
 
 </html>
