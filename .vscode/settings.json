@@ -1,3 +1,4 @@
 {
-  "css.lint.float": "warning"
+  "css.lint.float": "warning",
+  "cSpell.words": ["kintone"]
 }
