@@ -3,3 +3,92 @@
 /* Google font Icon */
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+/* しっぽり明朝読み込み */
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap");
+/* Noto Serif読み込み */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap");
+
+/* 基本的な設定 */
+:root {
+  --gray: #8fa7ac;
+  --accent_blue: #2b78a4;
+  --accent_red: #9d1e2e;
+  --dark_blue: #053653;
+  --dark_color: #02123c;
+  --dark_color-80: rgba(2, 16, 60, .8);
+  --white: #f4f4f4;
+}
+
+html {
+  background-color: var(--dark_color);
+  color: var(--white);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  font-family: "Shippori Mincho", "Noto Serif JP", "游明朝", serif;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ヘッダー */
+.top_header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 25px;
+  background-color: var(--dark_color-80);
+}
+
+.top_header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_left {
+  width: 152px;
+}
+
+.headerNav_list-right {
+  display: flex;
+  justify-content: space-around;
+
+  .nav_link {
+    color: var(--gray);
+    padding-bottom: 10px;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .nav_link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 0%;
+    background: linear-gradient(to right, var(--accent_red), var(--white), var(--accent_blue));
+    transition: width 0.5s ease;
+    opacity: 1;
+  }
+
+  .nav_link:hover {
+    background: linear-gradient(to right, var(--accent_red), var(--white), var(--accent_blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .nav_link:hover::after {
+    width: 100%;
+  }
+
+  .nav_link:visited {
+    color: var(--gray);
+  }

@@ -11,11 +11,11 @@
     <!-- 自動リンク消去 -->
     <meta name="format-detection" content="telephone=no,email=no,address=no">
     <!-- テーマカラーの設定(タブの色) -->
-    <meta name="theme-color" content="#" />
+    <meta name="theme-color" content="#02123c" />
     <!-- URLの正規表現 -->
     <link rel="canonical" href="">
     <!-- ファビコンの設定 -->
-    <link rel="icon" href="img/favicon.png">
+    <link rel="icon" href="img/Logo-mark.png">
     <!-- スマホのホームに追加したときのアイコン -->
     <link rel="apple-touch-icon" href="img/">
     <!-- CSS読み込み -->
@@ -25,17 +25,20 @@
   </head>
 
   <body>
-    <header class="">
-      <h1><img src="img/Logo.png" width="1001" height="501" alt="優羽Lab." class="header_logo"></h1>
-      <nav>
-        <ul class="header_nav">
-          <li class="nav_item"><a href="">HOME</a></li>
-          <li class="nav_item"><a href="#profile">PROFILE</a></li>
-          <li class="nav_item"><a href="#works">WORKS</a></li>
-          <li class="nav_item"><a href="#price">PRICE</a></li>
-          <li class="nav_item"><a href="#contact">CONTACT</a></li>
-        </ul>
-      </nav>
+    <header class="top_header">
+      <div class="wrapper">
+        <h1 class="header_left"><img src="img/Logo.png" width="1001" height="501" alt="優羽Lab." class="header_logo"></h1>
+        <nav class="header_nav" aria-label="サイトメニュー">
+          <ul class="headerNav_list-right">
+            <li class="nav_item"><a href="#" class="nav_link">HOME</a></li>
+            <li class="nav_item"><a href="#profile" class="nav_link">PROFILE</a></li>
+            <li class="nav_item"><a href="#works" class="nav_link">WORKS</a></li>
+            <li class="nav_item"><a href="#price" class="nav_link">PRICE</a></li>
+            <li class="nav_item"><a href="#contact" class="nav_link">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div><!-- .wrapper end-->
+
     </header>
 
     <main>
@@ -48,7 +51,7 @@
         <img src="img/mv.jpg" alt="背景" width="3600" height="2600" class="mv-background">
       </article>
 
-      <article id="profile" class="profile_container-wrapper">
+      <article id="profile" class="profile_container wrapper">
         <div class="profile inner">
           <h3 class="profile_title red">PROFILE</h3>
           <section class="profile_box">
@@ -156,7 +159,7 @@
         </div> <!-- inner end -->
       </article>
 
-      <article id="skills" class="skills_container-wrapper">
+      <article id="skills" class="skills_container wrapper">
         <div class="skills inner">
           <h2 class="skills_ttl red">Skills</h2>
           <section class="pgm">
@@ -238,7 +241,7 @@
         </div>
       </article>
 
-      <section id="works" class="container">
+      <section id="works" class="works_container wrapper">
         <h2 class="works_ttl red">Works</h2>
         <div class="works_content">
           <div class="category">
@@ -246,75 +249,83 @@
           </div>
           <section class="worksCards slider">
             <div class="worksCard">
-              <div class="worksCard_imgbox">
-                <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
-              </div>
-              <div class="worksCard_content">
-                <p class="works_client">Client&nbsp;Name&nbsp;様</p>
-                <p class="works_taxsonomy">業務内容</p>
-                <p class="tool">利用ツール,言語</p>
-              </div>
+              <a href="#" class="works_link">
+                <div class="worksCard_imgbox">
+                  <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
+                </div>
+                <div class="worksCard_content">
+                  <p class="works_client">Client&nbsp;Name&nbsp;様</p>
+                  <p class="works_taxsonomy">業務内容</p>
+                  <p class="tool">利用ツール,言語</p>
+                </div>
+              </a>
+            </div>
+            <div class="worksCard">
+              <a href="#" class="works_link">
+                <div class="worksCard_imgbox">
+                  <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
+                </div>
+                <div class="worksCard_content">
+                  <p class="works_client">Client&nbsp;Name&nbsp;様</p>
+                  <p class="works_taxsonomy">業務内容</p>
+                  <p class="tool">利用ツール,言語</p>
+                </div>
+              </a>
+            </div>
+            <div class="worksCard">
+              <a href="#" class="works_link">
+                <div class="worksCard_imgbox">
+                  <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
+                </div>
+                <div class="worksCard_content">
+                  <p class="works_client">Client&nbsp;Name&nbsp;様</p>
+                  <p class="works_taxsonomy">業務内容</p>
+                  <p class="tool">利用ツール,言語</p>
+                </div>
+              </a>
+            </div>
+            <div class="worksCard">
+              <a href="#" class="works_link">
+                <div class="worksCard_imgbox">
+                  <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
+                </div>
+                <div class="worksCard_content">
+                  <p class="works_client">Client&nbsp;Name&nbsp;様</p>
+                  <p class="works_taxsonomy">業務内容</p>
+                  <p class="tool">利用ツール,言語</p>
+                </div>
+              </a>
+            </div>
+            <div class="worksCard">
+              <a href="#" class="works_link">
+                <div class="worksCard_imgbox">
+                  <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
+                </div>
+                <div class="worksCard_content">
+                  <p class="works_client">Client&nbsp;Name&nbsp;様</p>
+                  <p class="works_taxsonomy">業務内容</p>
+                  <p class="tool">利用ツール,言語</p>
+                </div>
+              </a>
+            </div>
+            <div class="worksCard">
+              <a href="#" class="works_link">
+                <div class="worksCard_imgbox">
+                  <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
+                </div>
+                <div class="worksCard_content">
+                  <p class="works_client">Client&nbsp;Name&nbsp;様</p>
+                  <p class="works_taxsonomy">業務内容</p>
+                  <p class="tool">利用ツール,言語</p>
+                </div>
+              </a>
             </div>
 
-            <div class="worksCard">
-              <div class="worksCard_imgbox">
-                <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
-              </div>
-              <div class="worksCard_content">
-                <p class="works_client">Client&nbsp;Name&nbsp;様</p>
-                <p class="works_taxsonomy">業務内容</p>
-                <p class="tool">利用ツール,言語</p>
-              </div>
-            </div>
-
-            <div class="worksCard">
-              <div class="worksCard_imgbox">
-                <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
-              </div>
-              <div class="worksCard_content">
-                <p class="works_client">Client&nbsp;Name&nbsp;様</p>
-                <p class="works_taxsonomy">業務内容</p>
-                <p class="tool">利用ツール,言語</p>
-              </div>
-            </div>
-
-            <div class="worksCard">
-              <div class="worksCard_imgbox">
-                <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
-              </div>
-              <div class="worksCard_content">
-                <p class="works_client">Client&nbsp;Name&nbsp;様</p>
-                <p class="works_taxsonomy">業務内容</p>
-                <p class="tool">利用ツール,言語</p>
-              </div>
-            </div>
-
-            <div class="worksCard">
-              <div class="worksCard_imgbox">
-                <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
-              </div>
-              <div class="worksCard_content">
-                <p class="works_client">Client&nbsp;Name&nbsp;様</p>
-                <p class="works_taxsonomy">業務内容</p>
-                <p class="tool">利用ツール,言語</p>
-              </div>
-            </div>
-
-            <div class="worksCard">
-              <div class="worksCard_imgbox">
-                <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
-              </div>
-              <div class="worksCard_content">
-                <p class="works_client">Client&nbsp;Name&nbsp;様</p>
-                <p class="works_taxsonomy">業務内容</p>
-                <p class="tool">利用ツール,言語</p>
-              </div>
-            </div>
           </section>
         </div>
       </section>
 
-      <article id="price">
+      <article id="price" class="wrapper">
         <h2 class="price_ttl red">Price</h2><!-- /.price_ttl red -->
         <table class="priceTable" aria-label="価格表">
           <thead class="priceSubject">
@@ -368,7 +379,7 @@
         <p class="price_content">お気軽にお問い合わせください。</p><!-- .price_content end-->
       </article><!-- /#price -->
 
-      <section id="contact" class="contact">
+      <section id="contact" class="contact wrapper">
         <h2 class="contact_ttl">Contact</h2><!-- .contact_ttl end-->
         <p class="contact_content">お気軽にご相談ください。</p><!-- .contact_content end-->
         <form action="" class="contact_form">
@@ -405,6 +416,7 @@
             <label class="input_public"><input type="radio" name="public" value="可能">可能</label><!-- .input_public end-->
             <label class="input_public"><input type="radio" name="public" value="不可">不可</label><!-- .input_public end-->
           </fieldset><!-- .form_public end-->
+
           <div class="form_content">
             <label for="content" class="input_content">ご依頼内容</label><!-- .input_content end-->
             <textarea id="content" name="content" class="content"></textarea><!-- .content end-->
@@ -414,6 +426,13 @@
       </section><!-- #contact.contact end-->
     </main>
     <footer>
+      <nav class="footer_nav snsFavicon" aria-label="ソーシャルメディア">
+        <ul class="social_list">
+          <li class="list-item"></li><!-- .list-item end-->
+          <li class="list-item"></li><!-- .list-item end-->
+          <li class="list-item"></li><!-- .list-item end-->
+        </ul><!-- .social_list end-->
+      </nav><!-- .footer_nav snsFavicon end-->
       <p class="copyright">&copy;2025&nbsp;優羽Lab.</p><!-- .copyright end-->
     </footer>
     <!-- js読み込み -->
