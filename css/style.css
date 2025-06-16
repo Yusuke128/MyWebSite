@@ -11,84 +11,164 @@
 
 /* 基本的な設定 */
 :root {
-  --gray: #8fa7ac;
-  --accent_blue: #2b78a4;
-  --accent_red: #9d1e2e;
-  --dark_blue: #053653;
-  --dark_color: #02123c;
-  --dark_color-80: rgba(2, 16, 60, .8);
-  --white: #f4f4f4;
+    --gray: #8fa7ac;
+    --accent_blue: #2b78a4;
+    --accent_red: #9d1e2e;
+    --dark_blue: #053653;
+    --dark_color: #02123c;
+    --dark_color-80: rgba(2, 16, 60, .8);
+    --white: #f4f4f4;
 }
 
 html {
-  background-color: var(--dark_color);
-  color: var(--white);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  font-family: "Shippori Mincho", "Noto Serif JP", "游明朝", serif;
+    background-color: var(--dark_color);
+    color: var(--white);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: "Shippori Mincho", "Noto Serif JP", "游明朝", serif;
 }
 
 .wrapper {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.inner {
+    width: 80%;
+}
+
+.red {
+    color: var(--accent_red);
+}
+
+/* 各セクションのタイトルは共通なので同時に設定 */
+h3 {
+    font-size: 1.75em;
+    text-align: center;
+    text-shadow: .5px .5px 0 var(--white), -.5px -.5px 0 var(--white),
+    -.5px .5px 0 var(--white), .5px -.5px 0 var(--white),
+    0 .5px 0 var(--white), 0 -.5px 0 var(--white),
+    -.5px 0 0 var(--white), .5px 0 0 var(--white);
 }
 
 /* ヘッダー */
 .top_header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 25px;
-  background-color: var(--dark_color-80);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 124px;
+    padding: 1.5em 0;
+    background-color: var(--dark_color-80);
 }
 
 .top_header .wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
 }
 
 .header_left {
-  width: 152px;
+    max-width: 152px;
 }
 
+.header_logo {
+    width: 100%;
+}
+
+
 .headerNav_list-right {
-  display: flex;
-  justify-content: space-around;
+    display: flex;
+    justify-content: space-between;
 
-  .nav_link {
-    color: var(--gray);
-    padding-bottom: 10px;
+    gap: 20px;
+}
+
+.nav_link {
+    display: inline-block;
     position: relative;
+    padding-bottom: 10px;
+    color: var(--gray);
     text-decoration: none;
-    transition: color 0.3s ease;
-  }
+    transition: color .3s ease;
+}
 
-  .nav_link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 1px;
-    width: 0%;
-    background: linear-gradient(to right, var(--accent_red), var(--white), var(--accent_blue));
-    transition: width 0.5s ease;
+.nav_link::after {
     opacity: 1;
-  }
-
-  .nav_link:hover {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: .5px;
     background: linear-gradient(to right, var(--accent_red), var(--white), var(--accent_blue));
+    content: "";
+    transition: width .5s ease;
+}
+
+.nav_link:hover {
+    background: linear-gradient(to right, var(--accent_red), var(--white), var(--accent_blue));
+    color: transparent;
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: transparent;
-  }
+}
 
-  .nav_link:hover::after {
+.nav_link:hover::after {
     width: 100%;
-  }
+}
 
-  .nav_link:visited {
+.nav_link:visited {
     color: var(--gray);
-  }
+}
+
+/* footer */
+/* SNS(Businessツール)へのリンクは現時点では不要のため非表示 */
+footer {
+    padding: 24px;
+}
+
+.footer_nav {
+    display: none;
+}
+
+.copyright {
+    text-align: center;
+}
+
+/* MV装飾 */
+.mv {
+    position: relative;
+}
+
+.mv_text-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+
+    translate: -50% -50%;
+}
+
+.mv_title-boxShadow {
+    margin-bottom: .3em;
+    font-weight: bold;
+    font-size: 4em;
+    text-shadow: 10px 10px 20px rgba(43, 46, 253, .8);
+}
+
+.mv-background {
+    transform: scaleY(-1);
+}
+
+/* Profile */
+#profile {
+    margin-top: 80px;
+    padding: 24px 0;
+    background-color: var(--accent_blue);
+}
