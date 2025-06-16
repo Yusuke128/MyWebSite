@@ -30,20 +30,6 @@ html {
     font-family: "Shippori Mincho", "Noto Serif JP", "游明朝", serif;
 }
 
-.wrapper {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.inner {
-    width: 80%;
-}
-
-.red {
-    color: var(--accent_red);
-}
-
 /* 各セクションのタイトルは共通なので同時に設定 */
 h3 {
     font-size: 1.75em;
@@ -52,6 +38,27 @@ h3 {
     -.5px .5px 0 var(--white), .5px -.5px 0 var(--white),
     0 .5px 0 var(--white), 0 -.5px 0 var(--white),
     -.5px 0 0 var(--white), .5px 0 0 var(--white);
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.inner {
+    width: 80%;
+    margin-bottom: 24px;
+}
+
+.red {
+    color: var(--accent_red);
+}
+
+
+/* 各セクション毎の距離を統一 */
+#profile, #skills, #works, #price, #contact {
+    margin-top: 80px;
 }
 
 /* ヘッダー */
@@ -92,9 +99,13 @@ h3 {
     display: inline-block;
     position: relative;
     padding-bottom: 10px;
+            background-clip: text;
     color: var(--gray);
     text-decoration: none;
-    transition: color .3s ease;
+    transition: color .5s ease, -webkit-text-fill-color .5s ease, -webkit-background-clip .5s ease;
+
+    -webkit-text-fill-color: var(--gray);
+    -webkit-background-clip: text;
 }
 
 .nav_link::after {
@@ -103,7 +114,7 @@ h3 {
     bottom: 0;
     left: 0;
     width: 0;
-    height: .5px;
+    height: 1px;
     background: linear-gradient(to right, var(--accent_red), var(--white), var(--accent_blue));
     content: "";
     transition: width .5s ease;
@@ -168,7 +179,6 @@ footer {
 
 /* Profile */
 #profile {
-    margin-top: 80px;
     padding: 24px 0;
     background-color: var(--accent_blue);
 }
