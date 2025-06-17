@@ -12,8 +12,8 @@
 /* 基本的な設定 */
 :root {
     --gray: #8fa7ac;
-    --accent_blue: #2b78a4;
-    --accent_red: #9d1e2e;
+    --blue: #2b78a4;
+    --red: #9d1e2e;
     --dark_blue: #053653;
     --dark_color: #02123c;
     --dark_color-80: rgba(2, 16, 60, .8);
@@ -25,14 +25,15 @@ html {
     color: var(--white);
     font-style: normal;
     font-weight: normal;
+    /* 明示的なデフォルトフォントサイズの指定 */
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.75;
     font-family: "Shippori Mincho", "Noto Serif JP", "游明朝", serif;
 }
 
 /* 各セクションのタイトルは共通なので同時に設定 */
 h3 {
-    font-size: 1.75em;
+    font-size: 2.75em;
     text-align: center;
     text-shadow: .5px .5px 0 var(--white), -.5px -.5px 0 var(--white),
     -.5px .5px 0 var(--white), .5px -.5px 0 var(--white),
@@ -41,18 +42,18 @@ h3 {
 }
 
 .wrapper {
-    width: 100%;
-    max-width: 1200px;
+    width: 90dvw;
+    /* max-width: 1200px; */
     margin: 0 auto;
 }
 
 .inner {
-    width: 80%;
+    max-width: 88%;
     margin-bottom: 24px;
 }
 
 .red {
-    color: var(--accent_red);
+    color: var(--red);
 }
 
 
@@ -115,13 +116,13 @@ h3 {
     left: 0;
     width: 0;
     height: 1px;
-    background: linear-gradient(to right, var(--accent_red), var(--white), var(--accent_blue));
+    background: linear-gradient(to right, var(--red), var(--white), var(--blue));
     content: "";
     transition: width .5s ease;
 }
 
 .nav_link:hover {
-    background: linear-gradient(to right, var(--accent_red), var(--white), var(--accent_blue));
+    background: linear-gradient(to right, var(--red), var(--white), var(--blue));
     color: transparent;
 
     -webkit-background-clip: text;
@@ -179,6 +180,49 @@ footer {
 
 /* Profile */
 #profile {
-    padding: 24px 0;
-    background-color: var(--accent_blue);
+    padding: 1.5em 0;
+    background-color: var(--blue);
+}
+
+.profile_title {
+    margin-bottom: 1.5em;
+}
+
+.profile_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5em;
+
+    gap: 30px;
+}
+
+.profile_scope {
+    text-align: center;
+}
+
+.scopettl_box {
+    padding: 1.25em 0;
+    background-color: var(--dark_blue);
+    text-align: center;
+}
+
+.scope_title {
+    font-size: 1.25em;
+}
+
+.scope_txt {
+    margin-bottom: 1.25em;
+}
+
+.businessCards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /* gap: 30px; */
+}
+
+.businessImgbox {
+    max-height: 400px;
 }
