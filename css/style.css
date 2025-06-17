@@ -18,6 +18,7 @@
     --dark_color: #02123c;
     --dark_color-80: rgba(2, 16, 60, .8);
     --white: #f4f4f4;
+    --boxshadow: rgba(244, 244, 244, .25);
 }
 
 html {
@@ -28,7 +29,7 @@ html {
     /* 明示的なデフォルトフォントサイズの指定 */
     font-size: 16px;
     line-height: 1.75;
-    font-family: "Shippori Mincho", "Noto Serif JP", "游明朝", serif;
+    font-family: "Shippori Mincho", "Noto Serif JP", "游明朝", serif, "Material Icons";
 }
 
 /* 各セクションのタイトルは共通なので同時に設定 */
@@ -59,7 +60,9 @@ h3 {
 
 /* 各セクション毎の距離を統一 */
 #profile, #skills, #works, #price, #contact {
-    margin-top: 80px;
+    margin-top: 5rem;
+    padding: 1.25em 0;
+    box-shadow: 10px 10px 4px 0 var(--boxshadow);
 }
 
 /* ヘッダー */
@@ -180,7 +183,6 @@ footer {
 
 /* Profile */
 #profile {
-    padding: 1.5em 0;
     background-color: var(--blue);
 }
 
@@ -197,32 +199,102 @@ footer {
     gap: 30px;
 }
 
-.profile_scope {
-    text-align: center;
-}
-
 .scopettl_box {
-    padding: 1.25em 0;
+    padding: .75em 0;
     background-color: var(--dark_blue);
     text-align: center;
 }
 
-.scope_title {
+.scope_title, .card_ttl {
+    font-weight: bold;
     font-size: 1.25em;
 }
 
 .scope_txt {
     margin-bottom: 1.25em;
+    text-align: center;
 }
 
 .businessCards {
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    /* gap: 30px; */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* ↑300px幅で収まるだけ横に並べる */
+    gap: 2em;
 }
 
-.businessImgbox {
-    max-height: 400px;
+.businessCard, .businessImgbox, .businessCard_content {
+    display: grid;
+    align-items: center;
+
+    grid-template-rows: 1fr;
+    gap: 1em;
+}
+
+.card_list {
+    list-style: disc;
+    text-align: left;
+}
+
+/* Skills */
+#skills {
+    background-color: var(--gray);
+}
+
+#skills h4 {
+    margin-top: 2.5em;
+    padding: .75em 0;
+    background-color: var(--blue);
+    text-align: center;
+}
+
+.skills_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 2.5em;
+
+    gap: 1.25em;
+}
+
+.skills_category, .skillsContentBox {
+    width: 100%;
+}
+
+.skillsContentBox {
+    transition: all .5s;
+}
+
+
+
+.skills_name {
+    display: block;
+    position: relative;
+    padding: 1em;
+    background-color: var(--dark_blue);
+    transition: transform .5s;
+}
+
+.skills_name::before {
+    position: absolute;
+    top: 50%;
+    right: 2em;
+    height: 50%;
+    content: "\ead0";
+    transition: transform .5s;
+
+    translate: -50% -50%;
+}
+
+.skillsContentBox[open] .skills_name::before {
+    transform: rotate(90deg);
+}
+
+.skills_content {
+    padding: 1.25em .75em;
+    background-color: var(--white);
+    color: var(--dark_color);
+
+    /* コンテンツの開閉処理はJSで行う */
 }

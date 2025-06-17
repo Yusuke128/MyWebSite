@@ -74,8 +74,8 @@
             </div><!-- .scopettl_box end-->
             <p class="scope_txt">私が会社員時代から携わっており、現在も行っている活動を紹介します。</p>
 
-            <section class="businessCards">
-              <div class="businessCard">
+            <ul class="businessCards">
+              <li class="businessCard">
                 <div class="businessImgbox">
                   <img src="img/WebSite.png" alt="Webサイト制作・運用保守" width="501" height="383" class="card_img">
                 </div>
@@ -87,9 +87,9 @@
                     <li class="card_content">GoogleAnalyticsによる分析</li>
                   </ul>
                 </div>
-              </div>
+              </li>
 
-              <div class="businessCard">
+              <li class="businessCard">
                 <div class="businessImgbox">
                   <img src="img/Design.png" alt="デザイン制作" width="501" height="420" class="card_img">
                 </div>
@@ -101,9 +101,9 @@
                     <li class="card_content">簡単な写真加工・バナー制作</li>
                   </ul>
                 </div>
-              </div>
+              </li>
 
-              <div class="businessCard">
+              <li class="businessCard">
                 <div class="businessImgbox">
                   <img src="img/Security.png" alt="オフィスセキュリティ構築・運用保守" width="453" height="373" class="card_img">
                 </div>
@@ -115,9 +115,9 @@
                     <li class="card_content">保守・点検・メーカーへの一時対応</li>
                   </ul>
                 </div>
-              </div>
+              </li>
 
-              <div class="businessCard">
+              <li class="businessCard">
                 <div class="businessImgbox">
                   <img src="img/bussiness_NW.png" alt="オフィスネットワーク構築・運用保守" width="501" height="500" class="card_img">
                 </div>
@@ -129,9 +129,9 @@
                     <li class="card_content">ネットワーク障害対応・保守運用</li>
                   </ul>
                 </div>
-              </div>
+              </li>
 
-              <div class="businessCard">
+              <li class="businessCard">
                 <div class="businessImgbox">
                   <img src="img/server.png" alt="サーバー構築・運用保守" width="1548" height="1255" class="card_img">
                 </div>
@@ -143,9 +143,9 @@
                     <li class="card_content">AWS,Azureの構築ディレクション</li>
                   </ul>
                 </div>
-              </div>
+              </li>
 
-              <div class="businessCard">
+              <li class="businessCard">
                 <div class="businessImgbox">
                   <img src="img/RentalServer.png" alt="レンタルサーバー運用保守" width="500" height="500" class="card_img">
                 </div>
@@ -157,9 +157,9 @@
                     <li class="card_content">.htaccessによる挙動制御</li>
                   </ul>
                 </div>
-              </div>
+              </li>
 
-            </section> <!-- Card end -->
+            </ul> <!-- Card end -->
           </section> <!-- Scope Business end -->
         </div> <!-- inner end -->
       </article>
@@ -167,89 +167,112 @@
       <article id="skills" class="skills_container wrapper">
         <div class="skills inner">
           <h3 class="skills_ttl red">Skills</h3>
-          <section class="pgm">
-            <h4 class="pgm_ttl">Programming&nbsp;Language</h4>
-            <details class="pgm_list">
-              <summary class="pgm_html">HTML/CSS</summary>
-              <p class="pgm_content">デザインカンプを基にBEM設計を用いたサイトを1から構築します。(完全オリジナルも可能です)</p>
-              <p class="pgm_content">PC版のデザインカンプだけでもレスポンシブ対応いたします。(スマートフォン、タブレット、PC)</p>
-              <p class="pgm_content">A&nbsp;(more)&nbsp;Modern&nbsp;CSS&nbsp;Reset.cssを基にオリジナルcssを作成しています。</p>
-            </details>
-            <details class="pgm_list">
-              <summary class="pgm_js">Javascript(JQuery) </summary>
-              <p class="pgm_content">Webサイト上で簡単な動作をつけるJavascriptによるカスタマイズが可能です。</p>
-              <p class="pgm_content">このポートフォリオでは以下のカスタマイズを実施しています。</p>
-              <ul class="js_customizeContent">
-                <li class="conent_item"></li>
-              </ul>
-              <p class="pgm_content">また、簡単な処理ならばCybozu&nbsp;kintoneのカスタマイズも可能です。</p>
 
+          <section class="skills_box">
+            <h4 class="skills_category">Programming&nbsp;Language</h4>
+            <details class="skillsContentBox" name="openOne">
+              <summary class="skills_name">HTML/CSS</summary>
+              <ul class="skills_content">
+                <li>デザインカンプを基にBEM設計を用いたサイトを1から構築します。(完全オリジナルも可能です)</li>
+                <li>PC版のデザインカンプだけでもレスポンシブ対応いたします。(スマートフォン、タブレット、PC)</li>
+                <li>A&nbsp;(more)&nbsp;Modern&nbsp;CSS&nbsp;Reset.cssを基にオリジナルcssを作成しています。</li>
+              </ul><!-- .skills_content end-->
             </details>
-            <details class="pgm_list">
-              <summary class="pgm_php">WordPress(PHP)</summary>
-              <p class="pgm_content">WordPressのオリジナルテーマの作成が可能です。</p>
-              <p class="pgm_content">その他テーマのカスタマイズ,プラグインを利用したカスタム投稿・カスタムフィールドの作成、SEO対策も行います。</p>
-              <p class="pgm_content">実装経験のあるプラグイン</p>
-              <ul class="pgm_pluginList">
-                <li class="plugin_item">Advanced&nbsp;Custom&nbsp;Field</li>
-                <li class="plugin_item">Contact Form7</li>
+
+            <details class="skillsContentBox" name="openOne">
+              <summary class="skills_name">Javascript(JQuery) </summary>
+              <ul class="skills_content">
+                <li>Webサイト上で簡単な動作をつけるJavascriptによるカスタマイズが可能です。</li>
+                <li>このポートフォリオでは以下のカスタマイズを実施しています。
+                  <ul class="js_customizeContent">
+                    <li class="conent_item"></li>
+                  </ul>
+                </li>
+                <li>また、簡単な処理ならばCybozu&nbsp;kintoneのカスタマイズも可能です。</li>
+              </ul>
+            </details>
+
+            <details class="skillsContentBox" name="openOne">
+              <summary class="skills_name">WordPress(PHP)</summary>
+              <ul class="skills_content">
+                <li>WordPressのオリジナルテーマの作成が可能です。</li>
+                <li>その他テーマのカスタマイズ,プラグインを利用したカスタム投稿・カスタムフィールドの作成、SEO対策も行います。</li>
+                <li>実装経験のあるプラグイン
+                  <ul class="pgm_pluginList">
+                    <li class="plugin_item">Advanced&nbsp;Custom&nbsp;Field</li>
+                    <li class="plugin_item">Contact Form7</li>
+                  </ul>
+                </li>
               </ul>
             </details>
           </section>
 
-          <section class="devTool">
-            <h4 class="devTool_ttl">Developer&nbsp;Tools</h4>
+          <section class="skills_box">
+            <h4 class="skills_category">Developer&nbsp;Tools</h4>
 
-            <details class="devTool_list">
-              <summary class="devTool_vsc">Visual&nbsp;Studio&nbsp;Code</summary>
-              <p class="devTool_content">Visual&nbsp;Studio&nbsp;Codeを使用しコーディング、開発を行っております。</p>
-              <p class="devTool_content">プラグインを活用し、スペルミス、コーディングミスが少なく短い時間で開発・納品ができるようカスタマイズしております。</p>
+            <details class="skillsContentBox" name="openOne">
+              <summary class="skills_name">Visual&nbsp;Studio&nbsp;Code</summary>
+              <ul class="skills_content">
+                <li>Visual&nbsp;Studio&nbsp;Codeを使用しコーディング、開発を行っております。</li>
+                <li>プラグインを活用し、スペルミス、コーディングミスが少なく短い時間で開発・納品ができるようカスタマイズしております。</li>
+              </ul>
             </details>
 
-            <details class="devTool_list">
-              <summary class="devTool_psIll">Photoshop&nbsp;/&nbsp;Illustrator</summary>
-              <p class="devTool_content">バナーや名刺等のDTPデザインを作成する際に使用しています。</p>
-              <p class="devTool_content">写真の加工・合成や色味の調整も行い、違和感のない素材データを作成します。</p>
+            <details class="skillsContentBox" name="openOne">
+              <summary class="skills_name">Photoshop&nbsp;/&nbsp;Illustrator</summary>
+              <ul class="skills_content">
+                <li>バナーや名刺等のDTPデザインを作成する際に使用しています。</li>
+                <li>写真の加工・合成や色味の調整も行い、違和感のない素材データを作成します。</li>
+              </ul>
             </details>
 
-            <details class="devTool_list">
-              <summary class="devTool_fig">Figma&nbsp;XD</summary>
-              <p class="devTool_content">Figmaをメインで使用しワイヤーフレームはWebサイトのデザインを作成しております。</p>
-              <p class="devTool_content">ご要望に応じてFigma共有にてデザインの閲覧も可能です。</p>
+            <details class="skillsContentBox" name="openOne">
+              <summary class="skills_name">Figma&nbsp;XD</summary>
+              <ul class="skills_content">
+                <li>Figmaをメインで使用しワイヤーフレームはWebサイトのデザインを作成しております。</li>
+                <li>ご要望に応じてFigma共有にてデザインの閲覧も可能です。</li>
+              </ul>
             </details>
           </section>
 
-          <section class="others">
-            <h4 class="others_ttl">Others</h4>
-            <details class="others_list">
-              <summary class="others_kintone">Strengths(強み)</summary>
-              <ul class="content_list">
+          <section class="skills_box">
+            <h4 class="skills_category">Others</h4>
+
+            <details class="skillsContentBox" name="openOne">
+              <summary class="skills_name">Strengths(強み)</summary>
+              <ul class="skills_content">
                 <li>ヒアリング力：クライアントの意図や背景を正確に読み取る力</li>
                 <li>提案力：課題に対して具体的な制作方針や改善案を提示</li>
                 <li>実行力：提案から制作・納品まで一貫して対応可能</li>
                 <li>対応力：スポット案件から継続案件まで柔軟に対応</li>
                 <li>IT関連知識：ネットワーク、セキュリティに関するアドバイス</li>
-              </ul><!-- .content_list end-->
+              </ul><!-- .skills_content end-->
             </details>
-            <details class="others_list">
-              <summary class="others_kintone">kintone</summary>
-              <p class="others_content">前職にてCybozu&nbsp;kintoneのアプリ,環境開発を行ってました。</p>
-              <p class="others_content">プラグインの導入・設定がメインでしたが,必要に応じてJavascriptによるカスタマイズも行ってきました。</p>
-              <p class="others_content">現在、Cybozu&nbsp;Developersにてテスト・デモ環境を構築しています。</p>
-            </details>
-
-            <details class="others_list">
-              <summary class="others_aws">AWS&nbsp;certified&nbsp;Cloud&nbsp;Practitioner</summary>
-              <p class="others_content">2024年3月に取得しました。</p>
-              <p class="others_content">AWSに関する基本的な知識を有している証明となります。</p>
-              <p class="others_content">AWS導入に際し、アドバイスさせていただくことが可能です。</p>
+            <details class="skillsContentBox" name="openOne">
+              <summary class="skills_name">kintone</summary>
+              <ul class="skills_content">
+                <li>前職にてCybozu&nbsp;kintoneのアプリ,環境開発を行ってました。</li>
+                <li>プラグインの導入・設定がメインでしたが,必要に応じてJavascriptによるカスタマイズも行ってきました。</li>
+                <li>現在、Cybozu&nbsp;Developersにてテスト・デモ環境を構築しています。</li>
+              </ul>
             </details>
 
-            <details class="others_list">
-              <summary class="others_xserver">Xserverビジネスパートナー</summary>
-              <p class="others_content">2025年5月に登録しました。 </p>
-              <p class="others_content">取次店経由で申し込みすることでサーバー利用料割引などの特典が受けれることがあります。</p>
-              <p class="others_content">※ご契約自体はお客様名義でのご契約となります。</p>
+            <details class="skillsContentBox" name="openOne">
+              <summary class="skills_name aws">AWS&nbsp;certified&nbsp;Cloud&nbsp;Practitioner</summary>
+              <ul class="skills_content">
+                <li>2024年3月に取得しました。</li>
+                <li>AWSに関する基本的な知識を有している証明となります。</li>
+                <li>AWS導入に際し、アドバイスさせていただくことが可能です。</li>
+              </ul>
+            </details>
+
+            <details class="skillsContentBox" name="openOne">
+              <summary class="skills_name xserver">Xserverビジネスパートナー</summary>
+              <ul class="skills_content">
+                <li>2025年5月に登録しました。 </li>
+                <li>取次店経由で申し込みすることでサーバー利用料割引などの特典が受けれることがあります。</li>
+                <li>※ご契約自体はお客様名義でのご契約となります。</li>
+              </ul>
             </details>
 
           </section>
@@ -452,7 +475,7 @@
       <p class="copyright">&copy;2025&nbsp;優羽Lab.</p><!-- .copyright end-->
     </footer>
     <!-- js読み込み -->
-    <script src="https://kit.fontawesome.com/fc4b29f1b1.js" crossorigin="anonymous" defer></script>
+    <!-- <script src="https://kit.fontawesome.com/fc4b29f1b1.js" crossorigin="anonymous" defer></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
     <script src="js/function.js" defer></script>
