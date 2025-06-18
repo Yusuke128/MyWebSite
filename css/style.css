@@ -49,7 +49,7 @@ h3 {
 }
 
 .inner {
-    max-width: 88%;
+    width: 88%;
     margin-bottom: 24px;
 }
 
@@ -57,6 +57,22 @@ h3 {
     color: var(--red);
 }
 
+/* ボタンの装飾 */
+.button {
+    display: inline-block;
+    width: 280px;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 1.25em;
+    vertical-align: middle;
+}
+
+.button.active {
+    background-color: var(--white);
+    color: var(--red);
+}
 
 /* 各セクション毎の距離を統一 */
 #profile, #skills, #works, #price, #contact {
@@ -237,6 +253,7 @@ footer {
 }
 
 /* Skills */
+
 #skills {
     background-color: var(--gray);
 }
@@ -265,8 +282,6 @@ footer {
 .skillsContentBox {
     transition: all .5s;
 }
-
-
 
 .skills_name {
     display: block;
@@ -297,4 +312,85 @@ footer {
     color: var(--dark_color);
 
     /* コンテンツの開閉処理はJSで行う */
+}
+
+/* Works 
+JSにてカテゴリー毎にまとめる
+各カードはスライダー(特定幅以上は薄くする) */
+.works_container {
+    background-color: var(--dark_blue);
+}
+
+.category {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5em;
+    text-align: center;
+}
+
+.category .button {
+    margin: 27px;
+}
+
+.worksCards {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 1.5em 0 4.5em 0;
+    overflow: scroll;
+
+    gap: 2.5em;
+}
+
+.worksCard {
+    min-width: 450px;
+    padding: 1.25em;
+    border-radius: 30px;
+    background-color: var(--white);
+    color: var(--dark_color) !important;
+    text-align: center;
+}
+
+.works_client {
+    font-size: 2.75em;
+}
+
+.works_taxsonomy, .works_tool {
+    font-size: 1.25em;
+}
+
+/* Price */
+#price {
+    background-color: var(--blue);
+}
+
+.priceTable {
+    margin-top: 5em;
+    background-color: var(--white);
+    color: var(--dark_color);
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1em;
+    border: solid 1px var(--dark_color);
+}
+
+.price_content {
+    margin: 2.5em 0 3em;
+    text-align: center;
+}
+
+/* Contact */
+.contact {
+    background-color: rgba(244, 244, 244, .4);
+
+    backdrop-filter: blur(10px);
+}
+
+.contact_content {
+    text-align: center;
+}
+
+legend {
+    margin: 0;
 }

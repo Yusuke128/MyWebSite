@@ -279,13 +279,15 @@
         </div>
       </article>
 
-      <section id="works" class="works_container wrapper">
+      <section id="works" class="works_container">
         <h3 class="works_ttl red">Works</h3>
         <div class="works_content">
           <div class="category">
-            <button class="button web active" name="category">Web&nbsp;Site</button><button class="button design" name="category">Design</button>
+            <button class="button web active" name="category">Web&nbsp;Site</button>
+            <button class="button design" name="category">Design</button>
           </div>
           <section class="worksCards slider">
+
             <div class="worksCard">
               <a href="#" class="works_link">
                 <div class="worksCard_imgbox">
@@ -294,10 +296,11 @@
                 <div class="worksCard_content">
                   <p class="works_client">Client&nbsp;Name&nbsp;様</p>
                   <p class="works_taxsonomy">業務内容</p>
-                  <p class="tool">利用ツール,言語</p>
+                  <p class="works_tool">利用ツール,言語</p>
                 </div>
               </a>
             </div>
+
             <div class="worksCard">
               <a href="#" class="works_link">
                 <div class="worksCard_imgbox">
@@ -306,10 +309,11 @@
                 <div class="worksCard_content">
                   <p class="works_client">Client&nbsp;Name&nbsp;様</p>
                   <p class="works_taxsonomy">業務内容</p>
-                  <p class="tool">利用ツール,言語</p>
+                  <p class="works_tool">利用ツール,言語</p>
                 </div>
               </a>
             </div>
+
             <div class="worksCard">
               <a href="#" class="works_link">
                 <div class="worksCard_imgbox">
@@ -318,10 +322,11 @@
                 <div class="worksCard_content">
                   <p class="works_client">Client&nbsp;Name&nbsp;様</p>
                   <p class="works_taxsonomy">業務内容</p>
-                  <p class="tool">利用ツール,言語</p>
+                  <p class="works_tool">利用ツール,言語</p>
                 </div>
               </a>
             </div>
+
             <div class="worksCard">
               <a href="#" class="works_link">
                 <div class="worksCard_imgbox">
@@ -330,10 +335,11 @@
                 <div class="worksCard_content">
                   <p class="works_client">Client&nbsp;Name&nbsp;様</p>
                   <p class="works_taxsonomy">業務内容</p>
-                  <p class="tool">利用ツール,言語</p>
+                  <p class="works_tool">利用ツール,言語</p>
                 </div>
               </a>
             </div>
+
             <div class="worksCard">
               <a href="#" class="works_link">
                 <div class="worksCard_imgbox">
@@ -342,10 +348,11 @@
                 <div class="worksCard_content">
                   <p class="works_client">Client&nbsp;Name&nbsp;様</p>
                   <p class="works_taxsonomy">業務内容</p>
-                  <p class="tool">利用ツール,言語</p>
+                  <p class="works_tool">利用ツール,言語</p>
                 </div>
               </a>
             </div>
+
             <div class="worksCard">
               <a href="#" class="works_link">
                 <div class="worksCard_imgbox">
@@ -354,10 +361,11 @@
                 <div class="worksCard_content">
                   <p class="works_client">Client&nbsp;Name&nbsp;様</p>
                   <p class="works_taxsonomy">業務内容</p>
-                  <p class="tool">利用ツール,言語</p>
+                  <p class="works_tool">利用ツール,言語</p>
                 </div>
               </a>
             </div>
+
 
           </section>
         </div>
@@ -365,7 +373,7 @@
 
       <article id="price" class="wrapper">
         <h3 class="price_ttl red">Price</h3><!-- /.price_ttl red -->
-        <table class="priceTable" aria-label="価格表">
+        <table class="priceTable inner" aria-label="価格表">
           <thead class="priceSubject">
             <tr>
               <th>プラン</th>
@@ -413,14 +421,16 @@
             </tr>
           </tbody>
         </table><!-- /.priceTable -->
-        <p class="price_content">その他ご予算に応じて対応いたします。</p><!-- .price_content end-->
-        <p class="price_content">お気軽にお問い合わせください。</p><!-- .price_content end-->
+        <div class="price_content">
+          <p>その他ご予算に応じて対応いたします。</p>
+          <p>お気軽にお問い合わせください。</p>
+        </div><!-- .price_content end-->
       </article><!-- /#price -->
 
       <section id="contact" class="contact wrapper">
         <h3 class="contact_ttl">Contact</h3><!-- .contact_ttl end-->
         <p class="contact_content">お気軽にご相談ください。</p><!-- .contact_content end-->
-        <form action="" class="contact_form">
+        <form action="" class="contact_form inner">
 
           <div class="form_name">
             <label for="name" class="input_name">お名前</label><!-- .input_name end-->
@@ -453,6 +463,7 @@
             <legend>実績公開</legend>
             <label class="input_public"><input type="radio" name="public" value="可能">可能</label><!-- .input_public end-->
             <label class="input_public"><input type="radio" name="public" value="不可">不可</label><!-- .input_public end-->
+            <label class="input_public"><input type="radio" name="public" value="不可">組織名を伏せれば可能</label>
           </fieldset><!-- .form_public end-->
 
           <div class="form_content">
