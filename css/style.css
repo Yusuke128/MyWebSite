@@ -116,11 +116,9 @@ h3 {
 }
 
 .header_left {
+    width: auto;
     max-width: 152px;
-}
-
-.header_logo {
-    width: 100%;
+    max-height: 100%;
 }
 
 .headerNav_list-right {
@@ -314,10 +312,10 @@ footer {
     transition: transform .5s;
 }
 
-.skills_name::before {
+.skills_name::after {
     position: absolute;
     top: 50%;
-    right: 2em;
+    right: 0.25em;
     height: 50%;
     content: "\ead0";
     transition: transform .5s;
@@ -325,7 +323,7 @@ footer {
     translate: -50% -50%;
 }
 
-.skillsContentBox[open] .skills_name::before {
+.skillsContentBox[open] .skills_name::after {
     transform: rotate(90deg);
 }
 
@@ -335,6 +333,12 @@ footer {
     color: var(--dark_color);
 
     /* コンテンツの開閉処理はJSで行う */
+}
+
+.aws_logo,
+.xserver_logo {
+    max-width: 10em;
+    height: auto;
 }
 
 /* Works 
@@ -360,17 +364,27 @@ JSにてカテゴリー毎にまとめる
     flex-wrap: nowrap;
     margin: 1.5em 0 4.5em 0;
     overflow: scroll;
-
     gap: 2.5em;
 }
 
-.worksCard {
-    width: 450px;
+.worksCard,
+.slick-slide {
+    width: 450px !important;
+    margin: 0 2.5em;
     padding: 1.25em;
     border-radius: 30px;
     background-color: var(--white);
     color: var(--dark_color) !important;
     text-align: center;
+}
+
+/* スライダー実装時のバグ修正 */
+.slick-slider div {
+    transition: none;
+}
+
+.works_link {
+    color: var(--dark_color);
 }
 
 .works_client {
@@ -585,12 +599,19 @@ input[type="radio"]:checked:before {
 @media screen and (max-width: 796px) {
     .top_header {
         padding: 1em;
-        max-height: 10vh;
+        /* height: 10vh; */
+        transition: all .5s ease-in-out;
     }
 
     .top_header .wrapper {
         align-items: stretch;
         flex-direction: column;
+    }
+
+    .header_logo {
+        height: 100%;
+        width: auto;
+        transition: all .5s ease-in-out;
     }
 
     /* ハンバーガメニュー実装 */
@@ -604,12 +625,8 @@ input[type="radio"]:checked:before {
         right: 0;
         transition: all .5s ease-in-out;
 
-        translate: -100% -50%;
+        translate: -50% -50%;
         gap: 10px;
-    }
-
-    .open .humberger {
-        top: 5%;
     }
 
     .hum_border {
@@ -622,43 +639,50 @@ input[type="radio"]:checked:before {
         mix-blend-mode: difference;
     }
 
-    .open .hum_border {
-        position: absolute;
-        top: 50%;
-        right: 50%;
-
-        translate: -50% -50%;
-    }
-
-    .open .hum_border:first-child {
-        transform: rotate(45deg);
-    }
-
-    .open .hum_border:nth-child(2) {
-        opacity: 0;
-    }
-
-    .open .hum_border:last-child {
-        transform: rotate(-45deg);
+    .header_nav {
+        /* position: fixed; */
+        left: 0;
+        width: 100%;
+        transition: all .5s;
     }
 
     .headerNav_list-right {
-        display: block;
-        position: fixed;
-        width: 100%;
-        right: -100%;
+        flex-direction: column;
+    }
+
+    /* ハンバーガーメニュー展開時 */
+    .open {
         transition: all .5s ease;
-        height: 100dvh;
-    }
 
-    .open .headerNav_list-right {
-        position: relative;
-        right: 0;
-    }
+        .hum_border {
+            position: absolute;
+            top: 50%;
+            right: 50%;
 
-    .nav_item {
-        margin: 1.5em auto;
-        text-align: center;
+            translate: -50% -50%;
+        }
+
+        .hum_border:first-child {
+            transform: rotate(45deg);
+        }
+
+        .headerNav_list-right {
+            right: 0;
+        }
+
+        .hum_border:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hum_border:last-child {
+            transform: rotate(-45deg);
+        }
+
+        .nav_link {
+            display: block;
+            margin: 1.5em auto;
+            text-align: center;
+        }
     }
 
     .mv {
@@ -740,6 +764,10 @@ input[type="radio"]:checked:before {
         width: 88%;
     }
 
+    .works_client {
+        font-size: 2em;
+    }
+
     .priceTable {
         display: block;
         overflow-x: scroll;
@@ -751,6 +779,11 @@ input[type="radio"]:checked:before {
         left: 0;
         width: 100%;
         background-color: var(--white);
+    }
+
+    .priceTable th,
+    .priceTable td {
+        padding: 0.25em;
     }
 
     .priceTable .menu::after {
