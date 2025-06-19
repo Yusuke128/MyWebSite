@@ -584,7 +584,7 @@ input[type="radio"]:checked:before {
 
 @media screen and (max-width: 796px) {
     .top_header {
-        padding: 0;
+        padding: 1em;
         max-height: 10vh;
     }
 
