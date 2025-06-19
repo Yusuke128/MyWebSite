@@ -28,7 +28,13 @@
     <header class="top_header">
       <div class="wrapper">
         <h1 class="header_left"><img src="img/Logo.png" width="1001" height="501" alt="優羽Lab." class="header_logo"></h1>
+
         <nav class="header_nav" aria-label="サイトメニュー">
+          <div class="humberger">
+            <span class="hum_border"></span><!-- .hum_border end-->
+            <span class="hum_border"></span><!-- .hum_border end-->
+            <span class="hum_border"></span><!-- .hum_border end-->
+          </div>
           <ul class="headerNav_list-right">
             <li class="nav_item"><a href="#" class="nav_link">HOME</a></li>
             <li class="nav_item"><a href="#profile" class="nav_link">PROFILE</a></li>
@@ -37,6 +43,7 @@
             <li class="nav_item"><a href="#contact" class="nav_link">CONTACT</a></li>
           </ul>
         </nav>
+
       </div><!-- .wrapper end-->
 
     </header>
@@ -49,6 +56,7 @@
           <p class="mv_content">訪問いただきありがとうございます。</p>
           <p class="mv_content">優羽Lab.&nbsp;川野祐輔のポートフォリオです。</p>
         </div>
+        <a href="#profile" class="scroll_under"><span></span></a><!-- .scroll_under end-->
 
       </article>
 
@@ -376,7 +384,7 @@
         <table class="priceTable inner" aria-label="価格表">
           <thead class="priceSubject">
             <tr>
-              <th>プラン</th>
+              <th class="menu">プラン</th>
               <th>価格(税込)</th>
               <th>納期目安</th>
               <th>備考</th>
@@ -432,45 +440,47 @@
         <p class="contact_content">お気軽にご相談ください。</p><!-- .contact_content end-->
         <form action="" class="contact_form inner">
 
-          <div class="form_name">
-            <label for="name" class="input_name">お名前</label><!-- .input_name end-->
-            <input type="text" id="name" name="name" class="name">
+          <div class="form_box form_name">
+            <input type="text" id="name" name="name" class="form_text name" placeholder="お名前">
+            <label for="name" class="input_label">お名前</label><!-- .input_name end-->
           </div><!-- .form_name end-->
 
-          <div class="form_kana">
-            <label for="kana" class="input_kana">フリガナ </label><!-- .input_label end-->
-            <input type="text" id="kana" name="kana" class="kana">
+          <div class="form_box form_kana">
+            <input type="text" id="kana" name="kana" class="form_text kana" placeholder="フリガナ">
+            <label for="kana" class="input_label">フリガナ </label><!-- .input_label end-->
           </div><!-- .form_kana end-->
 
-          <div class="form_organization">
-            <label for="org" class="input_organization">組織名</label><!-- .input_organization end-->
-            <input type="text" id="org" name="org" class="organization">
+          <div class="form_box form_organization">
+            <input type="text" id="org" name="org" class="form_text organization" placeholder="組織名">
+            <label for="org" class="input_label">組織名</label><!-- .input_organization end-->
           </div><!-- .form_organization end-->
 
-          <div class="form_mail">
-            <label for="mail" class="input_main">メールアドレス</label><!-- .input_organization end-->
-            <input type="text" id="mail" name="mail" class="mail">
+          <div class="form_box form_mail">
+            <input type="text" id="mail" name="mail" class="form_text mail" placeholder="メールアドレス">
+            <label for="mail" class="input_label">メールアドレス</label><!-- .input_organization end-->
           </div><!-- .form_organization end-->
 
-          <fieldset class="form_type">
+          <fieldset class="form_box contact_selector">
             <legend>ご依頼種別</legend>
-            <label class="input_type"><input type="checkbox" name="type" value="Webサイト">Webサイトに関すること</label><!-- .input_type end-->
-            <label class="input_type"><input type="checkbox" name="type" value="デザイン">デザインに関すること</label><!-- .input_type end-->
-            <label class="input_type"><input type="checkbox" name="type" value="オフィスIT">オフィスITに関すること</label><!-- .input_type end-->
+            <label class="input_type" for="Website"><input type="checkbox" name="type" value="Webサイト" id="Website"><span>Webサイトに関すること</span></label><!-- .input_type end-->
+
+            <label class="input_type" for="design"><input type="checkbox" name="type" value="デザイン" id="design"><span>デザインに関すること</span></label><!-- .input_type end-->
+
+            <label class="input_type" for="officeIT"><input type="checkbox" name="type" value="オフィスIT" id="officeIT"><span>オフィスITに関すること</span></label><!-- .input_type end-->
           </fieldset><!-- .form_type end-->
 
-          <fieldset class="form_public">
+          <fieldset class="form_box  contact_selector">
             <legend>実績公開</legend>
-            <label class="input_public"><input type="radio" name="public" value="可能">可能</label><!-- .input_public end-->
-            <label class="input_public"><input type="radio" name="public" value="不可">不可</label><!-- .input_public end-->
-            <label class="input_public"><input type="radio" name="public" value="不可">組織名を伏せれば可能</label>
+            <label class="input_public"><input type="radio" name="public" value="可能" checked><span>可能</span></label><!-- .input_public end-->
+            <label class="input_public"><input type="radio" name="public" value="不可"><span>不可</span></label><!-- .input_public end-->
+            <label class="input_public"><input type="radio" name="public" value="不可"><span>組織名を伏せれば可能</span></label>
           </fieldset><!-- .form_public end-->
 
-          <div class="form_content">
-            <label for="content" class="input_content">ご依頼内容</label><!-- .input_content end-->
-            <textarea id="content" name="content" class="content"></textarea><!-- .content end-->
+          <div class="form_box form_content">
+            <textarea id="content" name="content" class="form_text content" placeholder="依頼内容"></textarea><!-- .content end--> <label for="content" class="input_label">ご依頼内容</label><!-- .input_content end-->
           </div><!-- .form_content end-->
-          <div class="form_submit"><input type="submit" name="submit" value="送信" class="button" aria-label="送信する"></div><!-- .form_submit end-->
+          <div class="form_submit"><input type="submit" name="submit" value="送信" class="button" aria-label="送信する">
+          </div><!-- .form_submit end-->
         </form><!-- .contact_form end-->
       </section><!-- #contact.contact end-->
     </main>

@@ -37,9 +37,9 @@ h3 {
     font-size: 2.75em;
     text-align: center;
     text-shadow: .5px .5px 0 var(--white), -.5px -.5px 0 var(--white),
-    -.5px .5px 0 var(--white), .5px -.5px 0 var(--white),
-    0 .5px 0 var(--white), 0 -.5px 0 var(--white),
-    -.5px 0 0 var(--white), .5px 0 0 var(--white);
+        -.5px .5px 0 var(--white), .5px -.5px 0 var(--white),
+        0 .5px 0 var(--white), 0 -.5px 0 var(--white),
+        -.5px 0 0 var(--white), .5px 0 0 var(--white);
 }
 
 .wrapper {
@@ -67,6 +67,7 @@ h3 {
     color: var(--white);
     font-size: 1.25em;
     vertical-align: middle;
+    transition: transform .5s ease-in-out, background-color .3s ease, color .3s ease, border .3s ease;
 }
 
 .button.active {
@@ -74,8 +75,19 @@ h3 {
     color: var(--red);
 }
 
+.button:hover:not(.active) {
+    transform: scale(1.1);
+    border: solid 1px var(--white);
+    background-color: var(--blue);
+    color: var(--white);
+}
+
 /* 各セクション毎の距離を統一 */
-#profile, #skills, #works, #price, #contact {
+#profile,
+#skills,
+#works,
+#price,
+#contact {
     margin-top: 5rem;
     padding: 1.25em 0;
     box-shadow: 10px 10px 4px 0 var(--boxshadow);
@@ -85,12 +97,12 @@ h3 {
 .top_header {
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 3;
     width: 100%;
-    height: 124px;
     padding: 1.5em 0;
     background-color: var(--dark_color-80);
 
+    backdrop-filter: blur(8px);
 
     /* mix-blend-mode: difference;
     変更すると可読性が落ちるので却下 */
@@ -122,7 +134,7 @@ h3 {
     display: inline-block;
     position: relative;
     padding-bottom: 10px;
-            background-clip: text;
+    background-clip: text;
     color: var(--gray);
     text-decoration: none;
     transition: color .5s ease, -webkit-text-fill-color .5s ease, -webkit-background-clip .5s ease;
@@ -162,6 +174,7 @@ h3 {
 /* footer */
 /* SNS(Businessツール)へのリンクは現時点では不要のため非表示 */
 footer {
+    margin-top: 2.5em;
     padding: 24px;
 }
 
@@ -173,7 +186,7 @@ footer {
     text-align: center;
 }
 
-/* MV装飾 */
+/* MV */
 .mv {
     position: relative;
 }
@@ -227,7 +240,8 @@ footer {
     text-align: center;
 }
 
-.scope_title, .card_ttl {
+.scope_title,
+.card_ttl {
     font-weight: bold;
     font-size: 1.25em;
 }
@@ -245,7 +259,9 @@ footer {
     gap: 2em;
 }
 
-.businessCard, .businessImgbox, .businessCard_content {
+.businessCard,
+.businessImgbox,
+.businessCard_content {
     display: grid;
     align-items: center;
 
@@ -281,7 +297,8 @@ footer {
     gap: 1.25em;
 }
 
-.skills_category, .skillsContentBox {
+.skills_category,
+.skillsContentBox {
     width: 100%;
 }
 
@@ -348,7 +365,7 @@ JSにてカテゴリー毎にまとめる
 }
 
 .worksCard {
-    min-width: 450px;
+    width: 450px;
     padding: 1.25em;
     border-radius: 30px;
     background-color: var(--white);
@@ -360,7 +377,8 @@ JSにてカテゴリー毎にまとめる
     font-size: 2.75em;
 }
 
-.works_taxsonomy, .works_tool {
+.works_taxsonomy,
+.works_tool {
     font-size: 1.25em;
 }
 
@@ -376,7 +394,8 @@ JSにてカテゴリー毎にまとめる
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     padding: 1em;
     border: solid 1px var(--dark_color);
 }
@@ -399,4 +418,346 @@ th, td {
 
 legend {
     margin: 0;
+}
+
+.contact_form {
+    margin-top: 3em;
+}
+
+.form_box {
+    position: relative;
+    margin-top: 3.5em;
+    vertical-align: middle;
+}
+
+.form_text {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: .5em;
+    border: solid 2px var(--red);
+    border-radius: 5px;
+    background-color: var(--white);
+    color: var(--dark_color);
+    line-height: 2em;
+    transition: border .3s ease-in-out;
+
+    grid-template-columns: subgrid;
+}
+
+.form_text:placeholder-shown {
+    padding: .5em;
+    border: solid 2px var(--red);
+    border-radius: 5px;
+    background-color: var(--white);
+    line-height: 2em;
+    transition: border .3s ease-in-out;
+}
+
+
+.form_text::placeholder {
+    color: transparent;
+}
+
+.form_text:placeholder-shown+.input_label {
+    display: block;
+    position: absolute;
+    top: .8em;
+    left: .9em;
+    background-color: transparent;
+    color: var(--red);
+    transition: all .3s ease;
+
+    user-select: none;
+}
+
+.form_submit {
+    margin: 1.5em;
+    text-align: center;
+}
+
+/* フォーム選択時の変化 */
+.form_text:focus {
+    border-color: var(--blue);
+}
+
+.form_text:focus+.input_label {
+    top: -1em;
+    padding: 0 5px;
+    border-radius: 5px;
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+/* 入力済要素の固定 */
+.form_text+.input_label {
+    position: absolute;
+    top: -1em;
+    left: .9em;
+    padding: 0 5px;
+    border-radius: 5px;
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.form_text {
+    border-color: var(--blue);
+}
+
+/* ここまで */
+/* チェックボックス,ラジオボタンの装飾 */
+input[type=checkbox] {
+    appearance: none;
+}
+
+.input_type,
+.input_public {
+    position: relative;
+}
+
+.input_type,
+.input_public {
+    cursor: pointer;
+}
+
+.input_type span::before {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    margin: .5em;
+    border: solid 2px var(--red);
+    vertical-align: middle;
+    content: "";
+}
+
+.input_type span::after {
+    display: inline-block;
+    opacity: 0;
+    position: absolute;
+    top: -.2em;
+    left: .9em;
+    transform: rotate(45deg);
+    width: 1em;
+    height: 1.5em;
+    border-right: .25em solid var(--gray);
+    border-bottom: .25em solid var(--gray);
+    content: "";
+}
+
+input[type=checkbox]:checked+span::before,
+input[type=radio]:checked+span:before {
+    border-color: var(--gray);
+}
+
+input[type=checkbox]:checked+span::after,
+.input_public {
+    opacity: 1;
+}
+
+input[type=radio] {
+    position: relative;
+    width: 1.5em;
+    height: 1.5em;
+    margin: -.25em .5em;
+    border: 2px solid var(--red);
+    border-radius: 50%;
+    vertical-align: middle;
+
+    appearance: none;
+}
+
+input[type="radio"]:checked {
+    border-color: var(--gray);
+}
+
+input[type="radio"]:checked:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: var(--gray);
+    content: "";
+}
+
+@media screen and (max-width: 796px) {
+    .top_header {
+        padding-bottom: 0;
+    }
+
+    .top_header .wrapper {
+        align-items: stretch;
+    }
+
+    /* ハンバーガメニュー実装 */
+    .humberger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transition: all .5s ease-in-out;
+
+        translate: -100% -50%;
+        gap: 10px;
+    }
+
+    .open .humberger {
+        top: 5%;
+    }
+
+    .hum_border {
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: var(--white);
+        transition: all .5s ease-in-out;
+
+        mix-blend-mode: difference;
+    }
+
+    .open .hum_border {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+
+        translate: -50% -50%;
+    }
+
+    .open .hum_border:first-child {
+        transform: rotate(45deg);
+    }
+
+    .open .hum_border:nth-child(2) {
+        opacity: 0;
+    }
+
+    .open .hum_border:last-child {
+        transform: rotate(-45deg);
+    }
+
+    .headerNav_list-right {
+        display: block;
+        position: fixed;
+        width: 100%;
+        right: -100%;
+        transition: all .5s ease;
+        height: 100dvh;
+    }
+
+    .open .headerNav_list-right {
+        position: relative;
+        right: 0;
+    }
+
+    .nav_item {
+        margin: 1.5em auto;
+        text-align: center;
+    }
+
+    .mv {
+        height: 100dvh;
+    }
+
+    .mv-background {
+        height: 100%;
+    }
+
+    .scroll_under {
+        width: 10px;
+        height: 10px;
+    }
+
+    .scroll_under {
+        position: absolute;
+        bottom: 1em;
+        left: 50%;
+        width: 2em;
+        height: 2em;
+        border: 1px solid #f5f5f5;
+        border-radius: 50%;
+        cursor: pointer;
+
+        translate: -50%;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2em;
+            height: 2em;
+            box-shadow: 0 0 0 0 rgba(43, 46, 253, .8);
+            border-radius: 50%;
+            opacity: 0;
+            animation: ripple1 3s infinite;
+            translate: -50%;
+        }
+    }
+
+    @keyframes ripple1 {
+        0% {
+            opacity: 0;
+        }
+
+        30% {
+            opacity: 1;
+        }
+
+        60% {
+            box-shadow: 0 0 0 2em rgba(43, 46, 253, .2);
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .scroll_under span {
+        position: absolute;
+        top: 10%;
+        left: 25%;
+        z-index: 2;
+        transform: rotate(-45deg);
+        width: 1em;
+        height: 1em;
+        border-bottom: 1px solid var(--white);
+        border-left: 1px solid var(--white);
+    }
+
+    .profile_box {
+        flex-direction: column;
+    }
+
+    .worksCard {
+        width: 88%;
+    }
+
+    .priceTable {
+        display: block;
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+
+    .priceTable .menu {
+        position: sticky;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+    }
+
+    .priceTable .menu::after {
+        position: absolute;
+        top: 0;
+        right: -1px;
+        width: 100%;
+        height: 100%;
+        border-right: 1px solid var(--dark_blue);
+        content: "";
+    }
 }
