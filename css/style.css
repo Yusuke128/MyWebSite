@@ -584,11 +584,13 @@ input[type="radio"]:checked:before {
 
 @media screen and (max-width: 796px) {
     .top_header {
-        padding-bottom: 0;
+        padding: 0;
+        max-height: 10vh;
     }
 
     .top_header .wrapper {
         align-items: stretch;
+        flex-direction: column;
     }
 
     /* ハンバーガメニュー実装 */
