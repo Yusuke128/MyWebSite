@@ -614,7 +614,7 @@ input[type="radio"]:checked:before {
         transition: all .5s ease-in-out;
     }
 
-    /* ハンバーガメニュー実装 */
+    /* ハンバーガメニュー実装 
     .humberger {
         display: flex;
         flex-direction: column;
@@ -640,7 +640,7 @@ input[type="radio"]:checked:before {
     }
 
     .header_nav {
-        /* position: fixed; */
+        /* position: fixed; 
         left: 0;
         width: 100%;
         transition: all .5s;
@@ -650,7 +650,7 @@ input[type="radio"]:checked:before {
         flex-direction: column;
     }
 
-    /* ハンバーガーメニュー展開時 */
+    /* ハンバーガーメニュー展開時 
     .open {
         transition: all .5s ease;
 
@@ -684,7 +684,7 @@ input[type="radio"]:checked:before {
             text-align: center;
         }
     }
-
+*/
     .mv {
         height: 100dvh;
     }
