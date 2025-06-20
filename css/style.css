@@ -688,6 +688,17 @@ JSでナビメニュー展開時に.no-scrollを付与 */
         cursor: pointer;
     }
 
+    .humberger-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+        height: 4.5vh;
+        min-height: 25px;
+        max-height: 35px;
+    }
+
     .hum_border {
         position: absolute;
         width: 100%;
