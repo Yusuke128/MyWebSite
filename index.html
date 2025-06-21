@@ -4,7 +4,7 @@
   <head>
     <title>優羽Lab.Portfolio</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" viewport-fit=cover>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 検索対応 -->
     <meta name="description" content="優羽Lab.のポートフォリオサイト,Webサイト制作からビジネスITの活用まで">
     <meta name="keywords" content="Webサイト,ECサイト,ポートフォリオ,優羽Lab.,川野祐輔,kintone構築,SIer,Xserverビジネスパートナー,AWS Cloud Practitioner FOUNDATIONAL">
@@ -19,9 +19,9 @@
     <!-- スマホのホームに追加したときのアイコン -->
     <link rel="apple-touch-icon" href="img/">
     <!-- CSS読み込み -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   </head>
 
   <body>
@@ -62,7 +62,7 @@
 
       <article id="profile" class="profile_container wrapper">
         <div class="profile inner">
-          <h3 class="profile_title red">PROFILE</h3>
+          <h3 class="profile_title ">PROFILE</h3>
           <section class="profile_box">
             <div class="profile_content-left"><img src="img/Profile.png" alt="プロフィール写真" width="72" height="72" class="profile_img"></div>
             <div class="profile_content-right">
@@ -174,7 +174,7 @@
 
       <article id="skills" class="skills_container wrapper">
         <div class="skills inner">
-          <h3 class="skills_ttl red">Skills</h3>
+          <h3 class="skills_ttl ">Skills</h3>
 
           <section class="skills_box">
             <h4 class="skills_category">Programming&nbsp;Language</h4>
@@ -256,6 +256,7 @@
                 <li>IT関連知識：ネットワーク、セキュリティに関するアドバイス</li>
               </ul><!-- .skills_content end-->
             </details>
+
             <details class="skillsContentBox" name="openOne">
               <summary class="skills_name">kintone</summary>
               <ul class="skills_content">
@@ -290,99 +291,183 @@
       </article>
 
       <section id="works" class="works_container">
-        <h3 class="works_ttl red">Works</h3>
+        <h3 class="works_ttl ">Works</h3>
         <div class="works_content">
           <div class="category">
-            <button class="button web active" name="category">Web&nbsp;Site</button>
-            <button class="button design" name="category">Design</button>
+            <button class="works_button button active" name="category" data-tab="website">Web&nbsp;Site</button>
+            <button class="works_button button" name="category" data-tab="design">Design</button>
           </div>
-          <section class="worksCards scroll_animation slider">
+          <section class="worksCards">
 
-            <div class="worksCard scroll_animation">
-              <a href="#" class="works_link">
-                <div class="worksCard_imgbox">
-                  <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
-                </div>
-                <div class="worksCard_content">
-                  <p class="works_client">Client&nbsp;Name&nbsp;1様</p>
-                  <p class="works_taxsonomy">業務内容</p>
-                  <p class="works_tool">利用ツール,言語</p>
-                </div>
-              </a>
-            </div>
+            <div class="website slidebox active">
+              <div class="worksCard scroll_animation">
+                <a href="#" class="works_link">
+                  <div class="worksCard_imgbox">
+                    <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
+                  </div>
+                  <div class="worksCard_content">
+                    <p class="works_client">Client&nbsp;Name&nbsp;1様</p>
+                    <p class="works_taxsonomy">業務内容</p>
+                    <p class="works_tool">利用ツール,言語</p>
+                  </div>
+                </a>
+              </div>
 
-            <div class="worksCard scroll_animation">
-              <a href="#" class="works_link">
-                <div class="worksCard_imgbox">
-                  <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
-                </div>
-                <div class="worksCard_content">
-                  <p class="works_client">Client&nbsp;Name&nbsp;2様</p>
-                  <p class="works_taxsonomy">業務内容</p>
-                  <p class="works_tool">利用ツール,言語</p>
-                </div>
-              </a>
-            </div>
+              <div class="worksCard scroll_animation">
+                <a href="#" class="works_link">
+                  <div class="worksCard_imgbox">
+                    <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
+                  </div>
+                  <div class="worksCard_content">
+                    <p class="works_client">Client&nbsp;Name&nbsp;2様</p>
+                    <p class="works_taxsonomy">業務内容</p>
+                    <p class="works_tool">利用ツール,言語</p>
+                  </div>
+                </a>
+              </div>
 
-            <div class="worksCard scroll_animation">
-              <a href="#" class="works_link">
-                <div class="worksCard_imgbox">
-                  <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
-                </div>
-                <div class="worksCard_content">
-                  <p class="works_client">Client&nbsp;Name&nbsp;3様</p>
-                  <p class="works_taxsonomy">業務内容</p>
-                  <p class="works_tool">利用ツール,言語</p>
-                </div>
-              </a>
-            </div>
+              <div class="worksCard scroll_animation">
+                <a href="#" class="works_link">
+                  <div class="worksCard_imgbox">
+                    <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
+                  </div>
+                  <div class="worksCard_content">
+                    <p class="works_client">Client&nbsp;Name&nbsp;3様</p>
+                    <p class="works_taxsonomy">業務内容</p>
+                    <p class="works_tool">利用ツール,言語</p>
+                  </div>
+                </a>
+              </div>
 
-            <div class="worksCard scroll_animation">
-              <a href="#" class="works_link">
-                <div class="worksCard_imgbox">
-                  <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
-                </div>
-                <div class="worksCard_content">
-                  <p class="works_client">Client&nbsp;Name&nbsp;4様</p>
-                  <p class="works_taxsonomy">業務内容</p>
-                  <p class="works_tool">利用ツール,言語</p>
-                </div>
-              </a>
-            </div>
+              <div class="worksCard scroll_animation">
+                <a href="#" class="works_link">
+                  <div class="worksCard_imgbox">
+                    <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
+                  </div>
+                  <div class="worksCard_content">
+                    <p class="works_client">Client&nbsp;Name&nbsp;4様</p>
+                    <p class="works_taxsonomy">業務内容</p>
+                    <p class="works_tool">利用ツール,言語</p>
+                  </div>
+                </a>
+              </div>
 
-            <div class="worksCard scroll_animation">
-              <a href="#" class="works_link">
-                <div class="worksCard_imgbox">
-                  <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
-                </div>
-                <div class="worksCard_content">
-                  <p class="works_client">Client&nbsp;Name&nbsp;5様</p>
-                  <p class="works_taxsonomy">業務内容</p>
-                  <p class="works_tool">利用ツール,言語</p>
-                </div>
-              </a>
-            </div>
+              <div class="worksCard scroll_animation">
+                <a href="#" class="works_link">
+                  <div class="worksCard_imgbox">
+                    <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
+                  </div>
+                  <div class="worksCard_content">
+                    <p class="works_client">Client&nbsp;Name&nbsp;5様</p>
+                    <p class="works_taxsonomy">業務内容</p>
+                    <p class="works_tool">利用ツール,言語</p>
+                  </div>
+                </a>
+              </div>
 
-            <div class="worksCard scroll_animation">
-              <a href="#" class="works_link">
-                <div class="worksCard_imgbox">
-                  <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
-                </div>
-                <div class="worksCard_content">
-                  <p class="works_client">Client&nbsp;Name&nbsp;6様</p>
-                  <p class="works_taxsonomy">業務内容</p>
-                  <p class="works_tool">利用ツール,言語</p>
-                </div>
-              </a>
-            </div>
+              <div class="worksCard scroll_animation">
+                <a href="#" class="works_link">
+                  <div class="worksCard_imgbox">
+                    <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
+                  </div>
+                  <div class="worksCard_content">
+                    <p class="works_client">Client&nbsp;Name&nbsp;6様</p>
+                    <p class="works_taxsonomy">業務内容</p>
+                    <p class="works_tool">利用ツール,言語</p>
+                  </div>
+                </a>
 
+              </div>
+            </div><!-- .website slider end-->
 
+            <div class="design slidebox">
+              <div class="worksCard scroll_animation">
+                <a href="#" class="works_link">
+                  <div class="worksCard_imgbox">
+                    <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
+                  </div>
+                  <div class="worksCard_content">
+                    <p class="works_client">Client&nbsp;Name&nbsp;1様</p>
+                    <p class="works_taxsonomy">業務内容</p>
+                    <p class="works_tool">利用ツール,言語</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="worksCard scroll_animation">
+                <a href="#" class="works_link">
+                  <div class="worksCard_imgbox">
+                    <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
+                  </div>
+                  <div class="worksCard_content">
+                    <p class="works_client">Client&nbsp;Name&nbsp;2様</p>
+                    <p class="works_taxsonomy">業務内容</p>
+                    <p class="works_tool">利用ツール,言語</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="worksCard scroll_animation">
+                <a href="#" class="works_link">
+                  <div class="worksCard_imgbox">
+                    <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
+                  </div>
+                  <div class="worksCard_content">
+                    <p class="works_client">Client&nbsp;Name&nbsp;3様</p>
+                    <p class="works_taxsonomy">業務内容</p>
+                    <p class="works_tool">利用ツール,言語</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="worksCard scroll_animation">
+                <a href="#" class="works_link">
+                  <div class="worksCard_imgbox">
+                    <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
+                  </div>
+                  <div class="worksCard_content">
+                    <p class="works_client">Client&nbsp;Name&nbsp;4様</p>
+                    <p class="works_taxsonomy">業務内容</p>
+                    <p class="works_tool">利用ツール,言語</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="worksCard scroll_animation">
+                <a href="#" class="works_link">
+                  <div class="worksCard_imgbox">
+                    <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
+                  </div>
+                  <div class="worksCard_content">
+                    <p class="works_client">Client&nbsp;Name&nbsp;5様</p>
+                    <p class="works_taxsonomy">業務内容</p>
+                    <p class="works_tool">利用ツール,言語</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="worksCard scroll_animation">
+                <a href="#" class="works_link">
+                  <div class="worksCard_imgbox">
+                    <img src="img/WebSite.png" alt="サムネイル" width="501" height="383" class="works_img">
+                  </div>
+                  <div class="worksCard_content">
+                    <p class="works_client">Client&nbsp;Name&nbsp;6様</p>
+                    <p class="works_taxsonomy">業務内容</p>
+                    <p class="works_tool">利用ツール,言語</p>
+                  </div>
+                </a>
+              </div>
+
+            </div><!-- .design slider end-->
+            <div class="worksCards_fade"></div><!-- .fade end-->
           </section>
+
         </div>
       </section>
 
       <article id="price" class="wrapper">
-        <h3 class="price_ttl red">Price</h3><!-- /.price_ttl red -->
+        <h3 class="price_ttl">Price</h3><!-- /.price_ttl  -->
         <table class="priceTable inner" aria-label="価格表">
           <thead class="priceSubject">
             <tr>

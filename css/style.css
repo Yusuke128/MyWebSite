@@ -14,6 +14,7 @@
     --gray: #8fa7ac;
     --blue: #2b78a4;
     --red: #9d1e2e;
+    --red_ttl: #7d3a53;
     --dark_blue: #053653;
     --dark_color: #02123c;
     --dark_color-80: rgba(2, 16, 60, .8);
@@ -21,6 +22,7 @@
     /* 追加：backdrop-filter代替用 */
     --white: #f4f4f4;
     --boxshadow: rgba(244, 244, 244, .25);
+    interpolate-size: allow-keywords
 }
 
 html {
@@ -53,10 +55,6 @@ h3 {
 .inner {
     width: 88%;
     margin-bottom: 24px;
-}
-
-.red {
-    color: var(--red);
 }
 
 /* ボタンの装飾 */
@@ -98,19 +96,20 @@ h3 {
 /* ヘッダー */
 .top_header {
     position: fixed;
-    top: 0;
+    top: 1em;
+    left: 50%;
     z-index: 1;
-    width: 100%;
+    width: 90dvw;
     padding: 1.5em 0;
     background-color: var(--dark_color-80);
     transition: all .3s ease-in-out;
-
+    border-radius: 100px;
+    transform: translateX(-50%);
     -webkit-backdrop-filter: blur(8px);
     /* Safari向けに追加 */
     backdrop-filter: blur(8px);
     display: flex;
     justify-content: space-between;
-    position: relative;
     height: auto;
     align-items: center;
     /* mix-blend-mode: difference;
@@ -312,6 +311,23 @@ footer {
 
 .skillsContentBox {
     transition: all .5s;
+    background-color: var(--white);
+}
+
+.skillsContentBox[open] .skills_content {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 .skills_name {
@@ -339,11 +355,12 @@ footer {
 
 .skills_content {
     padding: 1.25em .75em;
-    background-color: var(--white);
     color: var(--dark_color);
-
-    /* コンテンツの開閉処理はJSで行う */
 }
+
+/* detailsの開閉処理はJSで処理
+そのほうが滑らかに開閉するため */
+
 
 .aws_logo,
 .xserver_logo {
@@ -370,10 +387,14 @@ JSにてカテゴリー毎にまとめる
 }
 
 .worksCards {
+    position: relative;
+    overflow: hidden;
+}
+
+.worksCards .slider {
     display: flex;
     flex-wrap: nowrap;
     margin: 1.5em 0 4.5em 0;
-    overflow: scroll;
 
     gap: 2.5em;
 }
@@ -381,6 +402,7 @@ JSにてカテゴリー毎にまとめる
 .worksCard,
 .slick-slide {
     width: 450px !important;
+    max-width: 80dvw;
     margin: 0 2.5em;
     padding: 1.25em;
     border-radius: 30px;
@@ -389,9 +411,12 @@ JSにてカテゴリー毎にまとめる
     text-align: center;
 }
 
-/* スライダー実装時のバグ修正 */
-.slick-slider div {
-    transition: none;
+.slidebox.active {
+    display: block;
+}
+
+.slidebox:not(.active) {
+    display: none;
 }
 
 .works_link {
@@ -400,11 +425,30 @@ JSにてカテゴリー毎にまとめる
 
 .works_client {
     font-size: 2.75em;
+    text-wrap: nowrap;
 }
 
 .works_taxsonomy,
 .works_tool {
     font-size: 1.25em;
+}
+
+/* カテゴリー別で表示,非表示 
+初期はwebsite */
+.worksCards .slider {
+    display: none;
+}
+
+.worksCards .slider.active {
+    display: block;
+}
+
+/* worksCardの両サイドを暗くする */
+.worksCards_fade {
+    position: absolute;
+    background: linear-gradient(90deg, var(--dark_blue), transparent 30%, transparent 70%, var(--dark_blue));
+    inset: 0;
+    pointer-events: none;
 }
 
 /* Price */
@@ -425,6 +469,12 @@ td {
     border: solid 1px var(--dark_color);
 }
 
+/* プラン名を左詰めにする */
+.priceTable tbody .menu {
+    text-align: left;
+    width: 13em;
+}
+
 .price_content {
     margin: 2.5em 0 3em;
     text-align: center;
@@ -433,7 +483,6 @@ td {
 /* Contact */
 .contact {
     background-color: rgba(244, 244, 244, .4);
-
     backdrop-filter: blur(10px);
 }
 
@@ -478,7 +527,6 @@ legend {
     line-height: 2em;
     transition: border .3s ease-in-out;
 }
-
 
 .form_text::placeholder {
     color: transparent;
@@ -630,7 +678,6 @@ JSでナビメニュー展開時に.no-scrollを付与 */
 
     /* --- 基本的なレイアウト調整 --- */
     .top_header {
-        position: fixed;
         max-height: 10dvh;
         padding-top: 10px;
         padding-right: calc(1.5em + env(safe-area-inset-right));
@@ -640,6 +687,7 @@ JSでナビメニュー展開時に.no-scrollを付与 */
         border-radius: 50px;
         transition: max-height .5s;
         transition-delay: 1.5s;
+        background-color: transparent;
     }
 
     .top_header::before {
@@ -774,6 +822,8 @@ JSでナビメニュー展開時に.no-scrollを付与 */
  .openクラスがheaderに付いた時の変化 */
 
     .top_header.open {
+        top: 0;
+        width: 100dvw;
         max-height: 100dvh;
         flex-direction: row;
         padding: 0 1em;
@@ -890,7 +940,6 @@ JSでナビメニュー展開時に.no-scrollを付与 */
         border: 1px solid #f5f5f5;
         border-radius: 50%;
         cursor: pointer;
-
         translate: -50%;
     }
 
@@ -905,7 +954,6 @@ JSでナビメニュー展開時に.no-scrollを付与 */
         box-shadow: 0 0 0 0 rgba(43, 46, 253, .8);
         content: "";
         animation: ripple1 3s infinite;
-
         translate: -50%;
     }
 
@@ -959,6 +1007,10 @@ JSでナビメニュー展開時に.no-scrollを付与 */
         height: 100%;
         border-right: 1px solid var(--dark_blue);
         content: "";
+    }
+
+    .contact_selector .input_type {
+        display: inline-block;
     }
 }
 
