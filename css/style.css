@@ -665,7 +665,7 @@ JSでナビメニュー展開時に.no-scrollを付与 */
     .header_nav {
         /* メニュー項目を中央に配置 */
         display: flex;
-        justify-content: center;
+        justify-content: right;
         align-items: center;
         height: 100dvh;
         visibility: hidden;
@@ -812,6 +812,7 @@ JSでナビメニュー展開時に.no-scrollを付与 */
     .open .header_nav {
         visibility: visible;
         width: 100%;
+        justify-content: center;
     }
 
     .open .humberger {
