@@ -662,13 +662,13 @@ JSでナビメニュー展開時に.no-scrollを付与 */
     .top_header {
         max-height: 10dvh;
         padding-top: 10px;
-        padding-right: calc(1.5em + env(safe-area-inset-right));
+        padding-right: 1.5em;
         padding-bottom: 10px;
-        padding-left: calc(1.5em + env(safe-area-inset-left));
+        padding-left: 1.5em;
         flex-direction: column;
         border-radius: 50px;
-        transition: all .5s;
-        transition-delay: 1.5s;
+        transition: max-height .5s, border-radius .5s, top .5s, width .5s;
+        transition-delay: 1.5s, 1.5s, 2s, 0s;
         background-color: transparent;
     }
 
@@ -678,9 +678,10 @@ JSでナビメニュー展開時に.no-scrollを付与 */
         height: 0;
         background-color: var(--blue);
         position: absolute;
+        top: 0;
         left: 50%;
-        transition: height .5s ease, width .5s ease;
-        transition-delay: 1s, .5s;
+        transition: height .5s ease, width .5s ease, top .5s;
+        transition-delay: 1s, .5s, 2s;
     }
 
     .header_left {
