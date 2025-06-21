@@ -603,28 +603,10 @@ input[type=checkbox] {
     content: "";
 }
 
-.input_type span::after {
-    display: inline-block;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 10%;
-    transform: rotate(45deg);
-    width: 1em;
-    height: 1.5em;
-    border-right: .25em solid var(--gray);
-    border-bottom: .25em solid var(--gray);
-    content: "";
-}
-
 input[type=checkbox]:checked+span::before,
 input[type=radio]:checked+span:before {
     border-color: var(--gray);
-}
-
-input[type=checkbox]:checked+span::after,
-.input_public {
-    opacity: 1;
+    background-color: var(--gray);
 }
 
 input[type=radio] {
