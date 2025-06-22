@@ -22,7 +22,6 @@
     /* 追加：backdrop-filter代替用 */
     --white: #f4f4f4;
     --boxshadow: rgba(244, 244, 244, .25);
-    interpolate-size: allow-keywords
 }
 
 html {
@@ -95,23 +94,24 @@ h3 {
 
 /* ヘッダー */
 .top_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 1em;
     left: 50%;
     z-index: 1;
+    transform: translateX(-50%);
     width: 90dvw;
+    height: auto;
     padding: 1.5em 0;
+    border-radius: 100px;
     background-color: var(--dark_color-80);
     transition: .5s;
-    border-radius: 100px;
-    transform: translateX(-50%);
+
     -webkit-backdrop-filter: blur(8px);
     /* Safari向けに追加 */
     backdrop-filter: blur(8px);
-    display: flex;
-    justify-content: space-between;
-    height: auto;
-    align-items: center;
     /* mix-blend-mode: difference;
     変更すると可読性が落ちるので却下 */
 }
@@ -310,12 +310,12 @@ footer {
 }
 
 .skillsContentBox {
-    transition: all .5s;
     background-color: var(--white);
+    transition: all .5s;
 }
 
 .skillsContentBox[open] .skills_content {
-    animation: fadeIn 0.5s ease;
+    animation: fadeIn .5s ease;
 }
 
 @keyframes fadeIn {
@@ -425,6 +425,7 @@ JSにてカテゴリー毎にまとめる
 
 .works_client {
     font-size: 2.75em;
+
     text-wrap: nowrap;
 }
 
@@ -447,6 +448,7 @@ JSにてカテゴリー毎にまとめる
 .worksCards_fade {
     position: absolute;
     background: linear-gradient(90deg, var(--dark_blue), transparent 30%, transparent 70%, var(--dark_blue));
+
     inset: 0;
     pointer-events: none;
 }
@@ -471,8 +473,8 @@ td {
 
 /* プラン名を左詰めにする */
 .priceTable tbody .menu {
-    text-align: left;
     width: 13em;
+    text-align: left;
 }
 
 .price_content {
@@ -483,6 +485,7 @@ td {
 /* Contact */
 .contact {
     background-color: rgba(244, 244, 244, .4);
+
     backdrop-filter: blur(10px);
 }
 
@@ -660,26 +663,26 @@ JSでナビメニュー展開時に.no-scrollを付与 */
 
     /* --- 基本的なレイアウト調整 --- */
     .top_header {
+        flex-direction: column;
         max-height: 10dvh;
         padding-top: 10px;
         padding-right: 1.5em;
         padding-bottom: 10px;
         padding-left: 1.5em;
-        flex-direction: column;
         border-radius: 50px;
+        background-color: transparent;
         transition: max-height .5s, border-radius .5s, top .5s, width .5s;
         transition-delay: 1.5s, 1.5s, 2s, 0s;
-        background-color: transparent;
     }
 
     .top_header::before {
-        content: '';
-        width: 0;
-        height: 0;
-        background-color: var(--blue);
         position: absolute;
         top: 0;
         left: 50%;
+        width: 0;
+        height: 0;
+        background-color: var(--blue);
+        content: "";
         transition: height .5s ease, width .5s ease, top .5s;
         transition-delay: 1s, .5s, 2s;
     }
@@ -698,13 +701,13 @@ JSでナビメニュー展開時に.no-scrollを付与 */
         display: flex;
         justify-content: right;
         align-items: center;
-        height: 100dvh;
         visibility: hidden;
-        /* アイコンよりは後ろに配置 */
-        transition: right .5s ease;
-        margin: 0;
         width: 100%;
         max-width: 100%;
+        height: 100dvh;
+        margin: 0;
+        /* アイコンよりは後ろに配置 */
+        transition: right .5s ease;
         transition-delay: .5s;
     }
 
@@ -712,6 +715,7 @@ JSでナビメニュー展開時に.no-scrollを付与 */
     .headerNav_list-right {
         flex-direction: column;
         margin: 0;
+
         gap: 2em;
         /* 項目間の余白 */
     }
@@ -723,19 +727,19 @@ JSでナビメニュー展開時に.no-scrollを付与 */
 
     /*ハンバーガーを閉じる時の動作*/
     .header_nav .nav_item:nth-child(1) {
-        transition-delay: 0.4s;
+        transition-delay: .4s;
     }
 
     .header_nav .nav_item:nth-child(2) {
-        transition-delay: 0.3s;
+        transition-delay: .3s;
     }
 
     .header_nav .nav_item:nth-child(3) {
-        transition-delay: 0.2s;
+        transition-delay: .2s;
     }
 
     .header_nav .nav_item:nth-child(4) {
-        transition-delay: 0.1s;
+        transition-delay: .1s;
     }
 
     .header_nav .nav_item:nth-child(5) {
@@ -752,9 +756,11 @@ JSでナビメニュー展開時に.no-scrollを付与 */
 
     /* アイコンの表示と配置 */
     .humberger {
-        position: absolute;
         display: flex;
         align-items: center;
+        position: absolute;
+        top: 25%;
+        right: 5dvw;
         z-index: 102;
         width: 6vh;
         min-width: 35px;
@@ -764,9 +770,6 @@ JSでナビメニュー展開時に.no-scrollを付与 */
         max-height: 45px;
         margin: 0;
         cursor: pointer;
-        top: 25%;
-        right: 5dvw;
-
     }
 
     .humberger-inner {
@@ -787,6 +790,7 @@ JSでナビメニュー展開時に.no-scrollを付与 */
         margin: 0;
         background-color: var(--white);
         transition: .3s;
+
         mix-blend-mode: difference;
     }
 
@@ -807,20 +811,20 @@ JSでナビメニュー展開時に.no-scrollを付与 */
  .openクラスがheaderに付いた時の変化 */
 
     .top_header.open {
+        flex-direction: row;
         top: 0;
         width: 100dvw;
         max-height: 100dvh;
-        flex-direction: row;
         padding: 0 1em;
         border-radius: 0;
         transition-delay: 0s;
     }
 
     .top_header.open::before {
+        opacity: .8;
         width: 50%;
         height: 100dvh;
         transition-delay: .5s, 1s;
-        opacity: .8;
     }
 
     .open .header_left {
@@ -845,9 +849,9 @@ JSでナビメニュー展開時に.no-scrollを付与 */
     }
 
     .open .header_nav {
+        justify-content: center;
         visibility: visible;
         width: 100%;
-        justify-content: center;
     }
 
     .open .humberger {
@@ -925,6 +929,7 @@ JSでナビメニュー展開時に.no-scrollを付与 */
         border: 1px solid #f5f5f5;
         border-radius: 50%;
         cursor: pointer;
+
         translate: -50%;
     }
 
@@ -939,6 +944,7 @@ JSでナビメニュー展開時に.no-scrollを付与 */
         box-shadow: 0 0 0 0 rgba(43, 46, 253, .8);
         content: "";
         animation: ripple1 3s infinite;
+
         translate: -50%;
     }
 
