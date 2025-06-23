@@ -32,12 +32,12 @@ $(document).ready(function () {
 
     $(".slidebox").removeClass("active");
     $("." + tabId).addClass("active");
+
+    if ($(this).hasClass("active")) {
+      slider_class.slick("slickGoTo", 0);
+      slider_class.slick("setPosition");
+    }
   });
-
-  if ($(this).hasClass("active")) {
-    slider_class.slick("setPosition");
-  }
-
   //ハンバーガーメニュー
   const hum = $(".humberger");
   const header = $(".top_header");

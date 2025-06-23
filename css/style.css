@@ -360,8 +360,6 @@ footer {
 
 /* detailsの開閉処理はJSで処理
 そのほうが滑らかに開閉するため */
-
-
 .aws_logo,
 .xserver_logo {
     max-width: 10em;
@@ -371,6 +369,12 @@ footer {
 /* Works 
 JSにてカテゴリー毎にまとめる
 各カードはスライダー(特定幅以上は薄くする) */
+
+/* スライダーが最後まで行ったら戻ってしまうのを防ぐ */
+.slick-slider div {
+    transition: none;
+}
+
 .works_container {
     background-color: var(--dark_blue);
 }
